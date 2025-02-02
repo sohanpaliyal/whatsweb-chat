@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-[#262524]">
+    <div class="grid grid-cols-[.8fr_4.5fr_10fr] h-[calc(100vh-40px)] bg-[#202c33] m-5">
+        <div class="h-full border-r border-r-[#8696a026]"></div>
+        <div class="bg-[#111B21] h-full border-l border-l-[#8696a026]">
+            <div class="flex items-center justify-between px-4 py-3">
+                <div class="text-[#e9edef] text-2xl font-bold">
+                    Chats
+                </div>
+                <div class="flex items-center gap-2 text-[#aebac1]">
+                    <button class="p-2 active:bg-[#ffffff1a] rounded-full">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                            fill="none">
+                            <title>new-chat-outline</title>
+                            <path
+                                d="M9.53277 12.9911H11.5086V14.9671C11.5086 15.3999 11.7634 15.8175 12.1762 15.9488C12.8608 16.1661 13.4909 15.6613 13.4909 15.009V12.9911H15.4672C15.9005 12.9911 16.3181 12.7358 16.449 12.3226C16.6659 11.6381 16.1606 11.0089 15.5086 11.0089H13.4909V9.03332C13.4909 8.60007 13.2361 8.18252 12.8233 8.05119C12.1391 7.83391 11.5086 8.33872 11.5086 8.991V11.0089H9.49088C8.83941 11.0089 8.33411 11.6381 8.55097 12.3226C8.68144 12.7358 9.09947 12.9911 9.53277 12.9911Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.944298 5.52617L2.99998 8.84848V17.3333C2.99998 18.8061 4.19389 20 5.66665 20H19.3333C20.8061 20 22 18.8061 22 17.3333V6.66667C22 5.19391 20.8061 4 19.3333 4H1.79468C1.01126 4 0.532088 4.85997 0.944298 5.52617ZM4.99998 8.27977V17.3333C4.99998 17.7015 5.29845 18 5.66665 18H19.3333C19.7015 18 20 17.7015 20 17.3333V6.66667C20 6.29848 19.7015 6 19.3333 6H3.58937L4.99998 8.27977Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <button class="p-2 active:bg-[#ffffff1a] rounded-full">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                            version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24">
+                            <title>menu</title>
+                            <path fill="currentColor"
+                                d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative  mx-3">
+                <span class="text-[#aebac1] p-2 active:bg-[#ffffff1a] rounded-full absolute -top-1">
+                    <span aria-hidden="true" data-icon="search" class=""><svg viewBox="0 0 24 24" height="24" width="24"
+                            preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px"
+                            enable-background="new 0 0 24 24">
+                            <title>search</title>
+                            <path fill="currentColor"
+                                d="M15.009,13.805h-0.636l-0.22-0.219c0.781-0.911,1.256-2.092,1.256-3.386 c0-2.876-2.332-5.207-5.207-5.207c-2.876,0-5.208,2.331-5.208,5.207s2.331,5.208,5.208,5.208c1.293,0,2.474-0.474,3.385-1.255 l0.221,0.22v0.635l4.004,3.999l1.194-1.195L15.009,13.805z M10.201,13.805c-1.991,0-3.605-1.614-3.605-3.605 s1.614-3.605,3.605-3.605s3.605,1.614,3.605,3.605S12.192,13.805,10.201,13.805z">
+                            </path>
+                        </svg>
+                    </span>
+                </span>
+                <input type="text" class="bg-[#202c33] w-full p-1 ps-14 rounded focus:outline-0 text-[#aebac1]"
+                    placeholder="Search" />
+            </div>
+
+            <div class="flex gap-2 p-2">
+                <button
+                    class="bg-[#202c33] rounded-2xl px-3 py-1 text-[#8696a0] focus:text-[#00a884] focus:bg-[#0a332c]">
+                    All
+                </button>
+                <button
+                    class="bg-[#202c33] rounded-2xl px-3 py-1 text-[#8696a0]  focus:text-[#00a884] focus:bg-[#0a332c]">
+                    Unread
+                </button>
+                <button
+                    class="bg-[#202c33] rounded-2xl px-3 py-1 text-[#8696a0]  focus:text-[#00a884] focus:bg-[#0a332c]">
+                    Favourites
+                </button>
+                <button
+                    class="bg-[#202c33] rounded-2xl px-3 py-1 text-[#8696a0]  focus:text-[#00a884] focus:bg-[#0a332c]">
+                    Groups
+                </button>
+            </div>
+            <div class="p-4 flex gap-3">
+                <span class="text-[#00a884]">
+                    <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                        fill="none">
+                        <title>archived-outline</title>
+                        <path
+                            d="M21.4889 4.47778L19.9444 2.61111C19.6444 2.23333 19.1889 2 18.6667 2H5.33333C4.81111 2 4.35556 2.23333 4.04444 2.61111L2.51111 4.47778C2.18889 4.85556 2 5.35556 2 5.88889V19.7778C2 21 3 22 4.22222 22H19.7778C21 22 22 21 22 19.7778V5.88889C22 5.35556 21.8111 4.85556 21.4889 4.47778ZM5.6 4.22222H18.4L19.3 5.3H4.71111L5.6 4.22222ZM4.22222 19.7778V7.55556H19.7778V19.7778H4.22222ZM13.6111 9.77778H10.3889V13.1111H7.55556L12 17.5556L16.4444 13.1111H13.6111V9.77778Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </span>
+                <div class="text-base text-[#e9edef]">Archived</div>
+            </div>
+
+            <div class="flex gap-3 justify-center hover:bg-[#202c33]">
+                <span class="max-w-[49px] inline-block m-3">
+                    <svg viewBox="0 0 212 212" height="100%" width="100%" preserveAspectRatio="xMidYMid meet"
+                        class="xh8yej3 x5yr21d" version="1.1" x="0px" y="0px" enable-background="new 0 0 212 212">
+                        <title>default-user</title>
+                        <path fill="#DFE5E7"
+                            d="M106.251,0.5C164.653,0.5,212,47.846,212,106.25S164.653,212,106.25,212C47.846,212,0.5,164.654,0.5,106.25 S47.846,0.5,106.251,0.5z"
+                            class="xl21vc0"></path>
+                        <g>
+                            <path fill="#FFFFFF"
+                                d="M173.561,171.615c-0.601-0.915-1.287-1.907-2.065-2.955c-0.777-1.049-1.645-2.155-2.608-3.299 c-0.964-1.144-2.024-2.326-3.184-3.527c-1.741-1.802-3.71-3.646-5.924-5.47c-2.952-2.431-6.339-4.824-10.204-7.026 c-1.877-1.07-3.873-2.092-5.98-3.055c-0.062-0.028-0.118-0.059-0.18-0.087c-9.792-4.44-22.106-7.529-37.416-7.529 s-27.624,3.089-37.416,7.529c-0.338,0.153-0.653,0.318-0.985,0.474c-1.431,0.674-2.806,1.376-4.128,2.101 c-0.716,0.393-1.417,0.792-2.101,1.197c-3.421,2.027-6.475,4.191-9.15,6.395c-2.213,1.823-4.182,3.668-5.924,5.47 c-1.161,1.201-2.22,2.384-3.184,3.527c-0.964,1.144-1.832,2.25-2.609,3.299c-0.778,1.049-1.464,2.04-2.065,2.955 c-0.557,0.848-1.033,1.622-1.447,2.324c-0.033,0.056-0.073,0.119-0.104,0.174c-0.435,0.744-0.79,1.392-1.07,1.926 c-0.559,1.068-0.818,1.678-0.818,1.678v0.398c18.285,17.927,43.322,28.985,70.945,28.985c27.678,0,52.761-11.103,71.055-29.095 v-0.289c0,0-0.619-1.45-1.992-3.778C174.594,173.238,174.117,172.463,173.561,171.615z"
+                                class="x1d6ck0k"></path>
+                            <path fill="#FFFFFF"
+                                d="M106.002,125.5c2.645,0,5.212-0.253,7.68-0.737c1.234-0.242,2.443-0.542,3.624-0.896 c1.772-0.532,3.482-1.188,5.12-1.958c2.184-1.027,4.242-2.258,6.15-3.67c2.863-2.119,5.39-4.646,7.509-7.509 c0.706-0.954,1.367-1.945,1.98-2.971c0.919-1.539,1.729-3.155,2.422-4.84c0.462-1.123,0.872-2.277,1.226-3.458 c0.177-0.591,0.341-1.188,0.49-1.792c0.299-1.208,0.542-2.443,0.725-3.701c0.275-1.887,0.417-3.827,0.417-5.811 c0-1.984-0.142-3.925-0.417-5.811c-0.184-1.258-0.426-2.493-0.725-3.701c-0.15-0.604-0.313-1.202-0.49-1.793 c-0.354-1.181-0.764-2.335-1.226-3.458c-0.693-1.685-1.504-3.301-2.422-4.84c-0.613-1.026-1.274-2.017-1.98-2.971 c-2.119-2.863-4.646-5.39-7.509-7.509c-1.909-1.412-3.966-2.643-6.15-3.67c-1.638-0.77-3.348-1.426-5.12-1.958 c-1.181-0.355-2.39-0.655-3.624-0.896c-2.468-0.484-5.035-0.737-7.68-0.737c-21.162,0-37.345,16.183-37.345,37.345 C68.657,109.317,84.84,125.5,106.002,125.5z"
+                                class="x1d6ck0k"></path>
+                        </g>
+                    </svg>
+                </span>
+                <div class="flex-1 border-t border-[#8696a026] py-3">
+                    <div class="flex justify-between pe-2 items-center">
+                        <div class="text-[#e9edef] word-wrap flex-1">
+                            Sohan Paliyal
+                        </div>
+                        <div class="text-[#8696a0] text-xs">
+                            5:37pm
+                        </div>
+                    </div>
+                    <div class="text-[#8696a0] text-sm">
+                        hello there
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-3 justify-center hover:bg-[#202c33] group ">
+                <span class="max-w-[49px] inline-block m-3">
+                    <svg viewBox="0 0 212 212" height="100%" width="100%" preserveAspectRatio="xMidYMid meet"
+                        class="xh8yej3 x5yr21d" version="1.1" x="0px" y="0px" enable-background="new 0 0 212 212">
+                        <title>default-user</title>
+                        <path fill="#DFE5E7"
+                            d="M106.251,0.5C164.653,0.5,212,47.846,212,106.25S164.653,212,106.25,212C47.846,212,0.5,164.654,0.5,106.25 S47.846,0.5,106.251,0.5z"
+                            class="xl21vc0"></path>
+                        <g>
+                            <path fill="#FFFFFF"
+                                d="M173.561,171.615c-0.601-0.915-1.287-1.907-2.065-2.955c-0.777-1.049-1.645-2.155-2.608-3.299 c-0.964-1.144-2.024-2.326-3.184-3.527c-1.741-1.802-3.71-3.646-5.924-5.47c-2.952-2.431-6.339-4.824-10.204-7.026 c-1.877-1.07-3.873-2.092-5.98-3.055c-0.062-0.028-0.118-0.059-0.18-0.087c-9.792-4.44-22.106-7.529-37.416-7.529 s-27.624,3.089-37.416,7.529c-0.338,0.153-0.653,0.318-0.985,0.474c-1.431,0.674-2.806,1.376-4.128,2.101 c-0.716,0.393-1.417,0.792-2.101,1.197c-3.421,2.027-6.475,4.191-9.15,6.395c-2.213,1.823-4.182,3.668-5.924,5.47 c-1.161,1.201-2.22,2.384-3.184,3.527c-0.964,1.144-1.832,2.25-2.609,3.299c-0.778,1.049-1.464,2.04-2.065,2.955 c-0.557,0.848-1.033,1.622-1.447,2.324c-0.033,0.056-0.073,0.119-0.104,0.174c-0.435,0.744-0.79,1.392-1.07,1.926 c-0.559,1.068-0.818,1.678-0.818,1.678v0.398c18.285,17.927,43.322,28.985,70.945,28.985c27.678,0,52.761-11.103,71.055-29.095 v-0.289c0,0-0.619-1.45-1.992-3.778C174.594,173.238,174.117,172.463,173.561,171.615z"
+                                class="x1d6ck0k"></path>
+                            <path fill="#FFFFFF"
+                                d="M106.002,125.5c2.645,0,5.212-0.253,7.68-0.737c1.234-0.242,2.443-0.542,3.624-0.896 c1.772-0.532,3.482-1.188,5.12-1.958c2.184-1.027,4.242-2.258,6.15-3.67c2.863-2.119,5.39-4.646,7.509-7.509 c0.706-0.954,1.367-1.945,1.98-2.971c0.919-1.539,1.729-3.155,2.422-4.84c0.462-1.123,0.872-2.277,1.226-3.458 c0.177-0.591,0.341-1.188,0.49-1.792c0.299-1.208,0.542-2.443,0.725-3.701c0.275-1.887,0.417-3.827,0.417-5.811 c0-1.984-0.142-3.925-0.417-5.811c-0.184-1.258-0.426-2.493-0.725-3.701c-0.15-0.604-0.313-1.202-0.49-1.793 c-0.354-1.181-0.764-2.335-1.226-3.458c-0.693-1.685-1.504-3.301-2.422-4.84c-0.613-1.026-1.274-2.017-1.98-2.971 c-2.119-2.863-4.646-5.39-7.509-7.509c-1.909-1.412-3.966-2.643-6.15-3.67c-1.638-0.77-3.348-1.426-5.12-1.958 c-1.181-0.355-2.39-0.655-3.624-0.896c-2.468-0.484-5.035-0.737-7.68-0.737c-21.162,0-37.345,16.183-37.345,37.345 C68.657,109.317,84.84,125.5,106.002,125.5z"
+                                class="x1d6ck0k"></path>
+                        </g>
+                    </svg>
+                </span>
+                <div class="flex-1 border-t border-[#8696a026] py-3">
+                    <div class="flex justify-between pe-2 items-center">
+                        <div class="text-[#e9edef] word-wrap flex-1">
+                            Sohan Paliyal
+                        </div>
+                        <div class="text-[#00a884] text-xs font-medium">
+                            5:37pm
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+
+                        <div class="text-[#8696a0] text-sm overflow-hidden text-ellipsis line-clamp-1">
+                            hello therehello there hello therehello therehello therehello therehello therehello
+                            therehello therehello therehello therehello therehello there
+                        </div>
+
+                        <div class="pe-2 flex items-center gap-2">
+                            <div class="text-[#8696a0]">
+                                <svg viewBox="0 0 16 18" height="18" width="16" preserveAspectRatio="xMidYMid meet"
+                                    class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 16 18">
+                                    <title>muted</title>
+                                    <path fill="currentColor"
+                                        d="M11.52,9.206c0-1.4-0.778-2.567-1.944-3.111v1.711L11.52,9.75 C11.52,9.517,11.52,9.362,11.52,9.206z M13.465,9.206c0,0.7-0.156,1.4-0.389,2.022l1.167,1.167c0.544-0.933,0.778-2.1,0.778-3.267 c0-3.344-2.333-6.144-5.444-6.844v1.633C11.832,4.695,13.465,6.717,13.465,9.206z M2.032,2.206L1.02,3.217l3.656,3.656H1.02v4.667 h3.111l3.889,3.889v-5.211l3.344,3.344c-0.544,0.389-1.089,0.7-1.789,0.933v1.633c1.089-0.233,2.022-0.7,2.878-1.4l1.556,1.556 l1.011-1.011l-7-7L2.032,2.206z M8.02,2.984L6.387,4.617L8.02,6.25V2.984z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="bg-[#00a884] text-[111b21] rounded-full text-xs p-1">
+                                10
+                            </div>
+                            <div
+                                class="text-[#8696a0] group-hover:rotate-[90deg] opacity-0 invisible 
+                            group-hover:w-auto w-0 group-hover:opacity-100 group-hover:visible transition-all duration-100">
+                                <svg viewBox="0 0 30 30" height="24" preserveAspectRatio="xMidYMid meet" class=""
+                                    x="0px" y="0px">
+                                    <title>chevron</title>
+                                    <path fill="currentColor"
+                                        d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="flex items-center justify-between p-3 border border-[#8696a026]"
+                style="box-shadow: 0 1px 3px #0b141a;">
+                <div class="flex gap-4 items-center">
+                    <div class="max-w-[40px]">
+                        <svg viewBox="0 0 212 212" height="100%" width="100%" preserveAspectRatio="xMidYMid meet"
+                            class="xh8yej3 x5yr21d" version="1.1" x="0px" y="0px" enable-background="new 0 0 212 212">
+                            <title>default-user</title>
+                            <path fill="#DFE5E7"
+                                d="M106.251,0.5C164.653,0.5,212,47.846,212,106.25S164.653,212,106.25,212C47.846,212,0.5,164.654,0.5,106.25 S47.846,0.5,106.251,0.5z"
+                                class="xl21vc0"></path>
+                            <g>
+                                <path fill="#FFFFFF"
+                                    d="M173.561,171.615c-0.601-0.915-1.287-1.907-2.065-2.955c-0.777-1.049-1.645-2.155-2.608-3.299 c-0.964-1.144-2.024-2.326-3.184-3.527c-1.741-1.802-3.71-3.646-5.924-5.47c-2.952-2.431-6.339-4.824-10.204-7.026 c-1.877-1.07-3.873-2.092-5.98-3.055c-0.062-0.028-0.118-0.059-0.18-0.087c-9.792-4.44-22.106-7.529-37.416-7.529 s-27.624,3.089-37.416,7.529c-0.338,0.153-0.653,0.318-0.985,0.474c-1.431,0.674-2.806,1.376-4.128,2.101 c-0.716,0.393-1.417,0.792-2.101,1.197c-3.421,2.027-6.475,4.191-9.15,6.395c-2.213,1.823-4.182,3.668-5.924,5.47 c-1.161,1.201-2.22,2.384-3.184,3.527c-0.964,1.144-1.832,2.25-2.609,3.299c-0.778,1.049-1.464,2.04-2.065,2.955 c-0.557,0.848-1.033,1.622-1.447,2.324c-0.033,0.056-0.073,0.119-0.104,0.174c-0.435,0.744-0.79,1.392-1.07,1.926 c-0.559,1.068-0.818,1.678-0.818,1.678v0.398c18.285,17.927,43.322,28.985,70.945,28.985c27.678,0,52.761-11.103,71.055-29.095 v-0.289c0,0-0.619-1.45-1.992-3.778C174.594,173.238,174.117,172.463,173.561,171.615z"
+                                    class="x1d6ck0k"></path>
+                                <path fill="#FFFFFF"
+                                    d="M106.002,125.5c2.645,0,5.212-0.253,7.68-0.737c1.234-0.242,2.443-0.542,3.624-0.896 c1.772-0.532,3.482-1.188,5.12-1.958c2.184-1.027,4.242-2.258,6.15-3.67c2.863-2.119,5.39-4.646,7.509-7.509 c0.706-0.954,1.367-1.945,1.98-2.971c0.919-1.539,1.729-3.155,2.422-4.84c0.462-1.123,0.872-2.277,1.226-3.458 c0.177-0.591,0.341-1.188,0.49-1.792c0.299-1.208,0.542-2.443,0.725-3.701c0.275-1.887,0.417-3.827,0.417-5.811 c0-1.984-0.142-3.925-0.417-5.811c-0.184-1.258-0.426-2.493-0.725-3.701c-0.15-0.604-0.313-1.202-0.49-1.793 c-0.354-1.181-0.764-2.335-1.226-3.458c-0.693-1.685-1.504-3.301-2.422-4.84c-0.613-1.026-1.274-2.017-1.98-2.971 c-2.119-2.863-4.646-5.39-7.509-7.509c-1.909-1.412-3.966-2.643-6.15-3.67c-1.638-0.77-3.348-1.426-5.12-1.958 c-1.181-0.355-2.39-0.655-3.624-0.896c-2.468-0.484-5.035-0.737-7.68-0.737c-21.162,0-37.345,16.183-37.345,37.345 C68.657,109.317,84.84,125.5,106.002,125.5z"
+                                    class="x1d6ck0k"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-[#e9edef] word-wrap flex-1 font-bold">
+                        Sohan Paliyal
+                    </div>
+                </div>
+                <div class="text-[#aebac1]">
+                    <button class="p-2 active:bg-[#ffffff1a] rounded-full">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                            version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24">
+                            <title>search-alt</title>
+                            <path fill="currentColor"
+                                d="M15.9,14.3H15L14.7,14c1-1.1,1.6-2.7,1.6-4.3c0-3.7-3-6.7-6.7-6.7S3,6,3,9.7 s3,6.7,6.7,6.7c1.6,0,3.2-0.6,4.3-1.6l0.3,0.3v0.8l5.1,5.1l1.5-1.5L15.9,14.3z M9.7,14.3c-2.6,0-4.6-2.1-4.6-4.6s2.1-4.6,4.6-4.6 s4.6,2.1,4.6,4.6S12.3,14.3,9.7,14.3z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="p-2 active:bg-[#ffffff1a] rounded-full">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                            version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24">
+                            <title>menu</title>
+                            <path fill="currentColor"
+                                d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+            <div
+                class="bg-[#111B21] h-[calc(100dvh-170px)] border-r border-r-[#8696a026] border-l border-l-[#8696a026]">
+                <div class="p-5">
+                    <div class="flex mb-[2px]">
+                        <div class="bg-[#202c33] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                Maare main account me upi chal ni riyo h
+                            </span>
+                            <span class="text-[#8696a0] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                    <div class="flex mb-[2px]">
+                        <div class="bg-[#202c33] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                Khate me 20k h
+                            </span>
+                            <span class="text-[#8696a0] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                    <div class="flex mb-[2px]">
+                        <div class="bg-[#202c33] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                yogeshpaliyal.axis@ybl
+                            </span>
+                            <span class="text-[#8696a0] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                    <div class="flex mb-[2px]">
+                        <div class="bg-[#202c33] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                Account blocked he yr
+                            </span>
+                            <span class="text-[#8696a0] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center my-3">
+                        <span class="text-[#8696a0] text-xs py-1 px-4 bg-[#182229] inline-block rounded-lg"
+                            style="box-shadow :0 1px .5px #0b141a">
+                            20/1/2025
+                        </span>
+                    </div>
+
+
+                    <div class="flex mb-[2px] justify-end">
+                        <div class="bg-[#005c4b] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                Maare main account me upi chal ni riyo h
+                            </span>
+                            <span class="text-[#fff9] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                    <div class="flex mb-[2px] justify-end">
+                        <div class="bg-[#005c4b] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                Khate me 20k h
+                            </span>
+                            <span class="text-[#fff9] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                    <div class="flex mb-[2px] justify-end">
+                        <div class="bg-[#005c4b] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                yogeshpaliyal.axis@ybl
+                            </span>
+                            <span class="text-[#fff9] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                    <div class="flex mb-[2px] justify-end">
+                        <div class="bg-[#005c4b] text-[#e9edef] text-sm rounded-lg p-1 px-2 flex gap-2 relative pe-14"
+                            style="box-shadow :0 1px .5px #0b141a">
+
+                            <span>
+                                Account blocked he yr
+                            </span>
+                            <span class="text-[#fff9] text-[.6875rem] absolute bottom-0 right-1.5">5:34pm</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2 items-center justify-between p-2.5">
+
+                <button class="p-2 active:bg-[#ffffff1a] rounded-full text-[#aebac1] active:rotate-45">
+                    <svg viewBox="0 0 24 24" width="30" preserveAspectRatio="xMidYMid meet"
+                        class="x11xpdln x1d8287x x1h4ghdb transition-transform duration-300 ease-in-out active:rotate-45">
+                        <title>plus</title>
+                        <path fill="currentColor" d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"></path>
+                    </svg>
+                </button>
+                <div class="relative  mx-3 flex-1">
+                    <span
+                        class="text-[#aebac1] p-2 active:bg-[#ffffff1a] rounded-full absolute top-1/2 -translate-y-1/2">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                            fill="none">
+                            <title>expressions</title>
+                            <path
+                                d="M8.49893 10.2521C9.32736 10.2521 9.99893 9.5805 9.99893 8.75208C9.99893 7.92365 9.32736 7.25208 8.49893 7.25208C7.6705 7.25208 6.99893 7.92365 6.99893 8.75208C6.99893 9.5805 7.6705 10.2521 8.49893 10.2521Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M17.0011 8.75208C17.0011 9.5805 16.3295 10.2521 15.5011 10.2521C14.6726 10.2521 14.0011 9.5805 14.0011 8.75208C14.0011 7.92365 14.6726 7.25208 15.5011 7.25208C16.3295 7.25208 17.0011 7.92365 17.0011 8.75208Z"
+                                fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.8221 19.9799C15.5379 21.2537 13.8087 21.9781 12 22H9.27273C5.25611 22 2 18.7439 2 14.7273V9.27273C2 5.25611 5.25611 2 9.27273 2H14.7273C18.7439 2 22 5.25611 22 9.27273V11.8141C22 13.7532 21.2256 15.612 19.8489 16.9776L16.8221 19.9799ZM14.7273 4H9.27273C6.36068 4 4 6.36068 4 9.27273V14.7273C4 17.6393 6.36068 20 9.27273 20H11.3331C11.722 19.8971 12.0081 19.5417 12.0058 19.1204L11.9935 16.8564C11.9933 16.8201 11.9935 16.784 11.9941 16.7479C11.0454 16.7473 10.159 16.514 9.33502 16.0479C8.51002 15.5812 7.84752 14.9479 7.34752 14.1479C7.24752 13.9479 7.25585 13.7479 7.37252 13.5479C7.48919 13.3479 7.66419 13.2479 7.89752 13.2479L13.5939 13.2479C14.4494 12.481 15.5811 12.016 16.8216 12.0208L19.0806 12.0296C19.5817 12.0315 19.9889 11.6259 19.9889 11.1248V9.07648H19.9964C19.8932 6.25535 17.5736 4 14.7273 4ZM14.0057 19.1095C14.0066 19.2605 13.9959 19.4089 13.9744 19.5537C14.5044 19.3124 14.9926 18.9776 15.4136 18.5599L18.4405 15.5576C18.8989 15.1029 19.2653 14.5726 19.5274 13.996C19.3793 14.0187 19.2275 14.0301 19.0729 14.0295L16.8138 14.0208C15.252 14.0147 13.985 15.2837 13.9935 16.8455L14.0057 19.1095Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    <input type="text" class="bg-[#2a3942] w-full p-3 ps-14 rounded-lg focus:outline-0 text-[#aebac1]"
+                        placeholder="Type a message" />
+                </div>
+                <button class="p-2 active:bg-[#ffffff1a] rounded-full text-[#aebac1]">
+                    <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class=""
+                        version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24">
+                        <title>ptt</title>
+                        <path fill="currentColor"
+                            d="M11.999,14.942c2.001,0,3.531-1.53,3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531 S8.469,2.35,8.469,4.35v7.061C8.469,13.412,9.999,14.942,11.999,14.942z M18.237,11.412c0,3.531-2.942,6.002-6.237,6.002 s-6.237-2.471-6.237-6.002H3.761c0,4.001,3.178,7.297,7.061,7.885v3.884h2.354v-3.884c3.884-0.588,7.061-3.884,7.061-7.885 L18.237,11.412z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- <div
+            class="flex items-center justify-center relative border-r border-r-[#8696a026] border-l border-l-[#8696a026]">
+            <div class="text-center">
+                <img src="https://static.whatsapp.net/rsrc.php/v4/yS/r/aGcVD59xVTb.png" alt=""
+                    class="max-w-[320px] inline-block">
+                <h1 class="text-[#e9edefe0] text-4xl mt-10 font-normal">Download WhatsApp for Mac</h1>
+                <div class="text-sm text-[#aebac1] mt-6">Make calls and get a faster experience when you download the
+                    Mac app.</div>
+                <button class="bg-[#00a884] rounded-3xl mt-5 px-6 py-2.5 text-sm">Get from App Store</button>
+            </div>
+            <div class="absolute bottom-10 text-[#667781] text-sm">
+                <span class="inline-block align-center">
+                    <svg viewBox="0 0 10 12" height="12" width="10" preserveAspectRatio="xMidYMid meet" class=""
+                        version="1.1">
+                        <title>lock-small</title>
+                        <path
+                            d="M5.00847986,1.6 C6.38255462,1.6 7.50937014,2.67435859 7.5940156,4.02703389 L7.59911976,4.1906399 L7.599,5.462 L7.75719976,5.46214385 C8.34167974,5.46214385 8.81591972,5.94158383 8.81591972,6.53126381 L8.81591972,9.8834238 C8.81591972,10.4731038 8.34167974,10.9525438 7.75719976,10.9525438 L2.25767996,10.9525438 C1.67527998,10.9525438 1.2,10.4731038 1.2,9.8834238 L1.2,6.53126381 C1.2,5.94158383 1.67423998,5.46214385 2.25767996,5.46214385 L2.416,5.462 L2.41679995,4.1906399 C2.41679995,2.81636129 3.49135449,1.68973395 4.84478101,1.60510326 L5.00847986,1.6 Z M5.00847986,2.84799995 C4.31163824,2.84799995 3.73624912,3.38200845 3.6709675,4.06160439 L3.6647999,4.1906399 L3.663,5.462 L6.35,5.462 L6.35111981,4.1906399 C6.35111981,3.53817142 5.88169076,2.99180999 5.26310845,2.87228506 L5.13749818,2.85416626 L5.00847986,2.84799995 Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </span>
+                Your personal messages are end-to-end encrypted
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
