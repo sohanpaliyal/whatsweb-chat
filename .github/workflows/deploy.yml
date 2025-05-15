@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy single HTML file to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # or your default branch
 
 permissions:
   contents: read
@@ -21,17 +21,10 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload site to artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload HTML as artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: .  # Adjust path if your HTML is in a subdirectory
-
-      # Add this step to pre-fetch the required action
-      - name: Pre-fetch upload-artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: dummy
-          path: README.md  # Any small file just to make this step valid
+          path: .  # Ensure index.html is in root
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
